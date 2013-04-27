@@ -1,0 +1,54 @@
+<form action="/results/<%= @id %>/csv" method="post">
+
+  <% if @hits %>
+    <table class="hits"> 
+      <thead class="header">
+        <tr>
+          <th>Sequence ID</th>
+          <th>Accession Number</th>
+          <th>Description</th>
+          <th>Sequence</th>
+          <th>Length</th>
+          <th>Query Coverage</th>
+          <th>Max. Identity</th>
+          <th>E value</th>
+          <th>Source</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @hits.each do |hit| %>
+          <tr class="hit">
+            <td class="sequence-id"><%= hit.qseqid %></td>
+            <td class="accession-id">
+              <input type="checkbox" name="export_hits[]" value="<%= hit.saccver %>" />
+              <%= hit.saccver %>
+            </td>
+            <td class="hit-definition"><%= hit.stitle %></td>
+            <td class="hit-sequence"><%= hit.sseq %></td>
+            <td class="hit-length"><%= hit.slen %></td>
+            <td class="query-coverage"><%= hit.qcovs %></td>
+            <td class="max-ident"><%= hit.pident %></td>
+            <td class="hit-evalue"><%= hit.evalue %></td> 
+            <td class="references">
+              <% hit.references.each do |ref| %>
+                <p class='reference'>
+                  <b><%= ref.authors %></b><br />
+                  <i><%= ref.journal %></i><br />
+                  <%= ref.description %>
+                </p>
+              <% end %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    <div class="export">
+      <h2>Export selected hits to CSV</h2>
+      <input type="submit" value="Export" />
+    </div>
+  <% else %>
+    <p>No hits yet. Refresh at will &hellip;</p>
+  <% end %>
+
+</form>

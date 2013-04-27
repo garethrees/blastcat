@@ -1,0 +1,90 @@
+body {
+  font-family: arial;
+  color: black;
+  background-color: #FDFDFD;
+}
+
+#main {
+  max-width: 98%;
+  margin: 0 auto 120px auto;
+}
+
+#BlastCat {
+  max-width: 98%;
+  margin: 0 auto;
+}
+
+.results-page .query-sequence {
+  word-wrap: break-word;
+}
+
+tr {
+  border: 2px solid #000;
+}
+
+tr:nth-child(even) {
+  background-color: #DDDDDD;
+}
+
+
+tr:nth-child(odd) {
+  background-color: white;
+}
+
+td {
+  border: 2px solid #000000;
+}
+
+.hits .accession-id{
+  width: 150px;
+}
+
+.hits .hit-definition{
+  word-wrap: break-word;
+  max-width: 200px;
+}
+
+.hits .hit-sequence {
+  word-wrap: break-word;
+  max-width: 350px;
+  font-size: 12px;
+}
+
+.hits .hit-evalue {
+  width: 150px;
+}
+
+.hits .hit-length{
+  max-width: 40px;
+}
+
+.hits .query-coverage{
+  max-width: 40px;
+}
+
+.hits .max-ident{
+  max-width: 40px;
+}
+
+.hits .references {
+  width: 400px;
+}
+
+.hits .references .reference {
+  background: #DBDCC2;
+  border-bottom: 1px solid #666;
+  margin-bottom: 2px;
+  padding: 2px;
+}
+
+.hits {
+  font-size: 14px;
+  max-with: 1024px;
+}
+
+.header,
+.header tr {
+  background-color: #000000;
+  color: #FFFFFF;
+  font-size: 16px;
+}

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo '----> Updating bundle'
+bundle >/dev/null
+
+echo '----> Clearing tmp files'
+rm -rf ./tmp/* >/dev/null
+mkdir ./tmp/blasts >/dev/null
+
+echo '----> Launching application'
+bundle exec shotgun
