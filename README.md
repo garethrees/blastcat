@@ -28,4 +28,13 @@ $ killall ruby
 $ ./start
 ```
 
+Screenshots
+-----------
 
+**Sequence input**
+
+![Sequence input](http://i.imgur.com/pc3e6OB.png "Sequence input")
+
+**Blast results**
+
+![Blast results](http://i.imgur.com/wglYc7U.png "Blast results")
