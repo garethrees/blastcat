@@ -4,7 +4,7 @@ Blastcat
 Usage
 -----
 
-Download and install the [blast command line tools](ftp://ftp.ncbi.nlm.nih.gov/blast/executables/LATEST/ncbi-blast-2.2.28+.dmg).
+Download and install the [blast command line tools](ftp://ftp.ncbi.nlm.nih.gov/blast/executables/LATEST/).
 
 Open iTerm and type each of the following commands (the `$` represents a new command).
 
